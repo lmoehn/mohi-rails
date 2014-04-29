@@ -1,9 +1,11 @@
 require 'spec_helper'
 
-feature 'all things Mohi' do
-  scenario 'shows a homey home page' do
+feature 'Prospects' do
+  scenario 'Prospect enters intitial information' do
     visit '/'
 
-    expect(page).to have_content "New Prospect"
+    expect(page).to have_content 'New Prospect'
+    click_link 'Learn More'
+    expect(page).to have_content 'Prospect Information'
   end
 end
