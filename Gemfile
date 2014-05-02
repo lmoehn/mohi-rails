@@ -22,19 +22,20 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'rails_12factor', '~> 0.0.2'
+gem 'bitters', '~> 0.9.3'
+gem 'bourbon', '~> 3.2.1'
+gem 'neat', '~> 1.5.1'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# gem 'spring',        group: :development
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'capybara', '~> 2.2.1'
 end
-
-gem 'bourbon', '~> 3.2.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

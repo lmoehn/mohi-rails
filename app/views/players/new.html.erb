@@ -1,0 +1,90 @@
+<h2>Player Information</h2>
+
+<%= form_for @player do |f| %>
+
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :aka %>
+    <%= f.text_field :aka %>
+  </p>
+
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :phone_type1 %>
+    <%= f.text_field :phone_type1 %>
+  </p>
+
+  <p>
+    <%= f.label :phone1 %>
+    <%= f.text_field :phone1 %>
+  </p>
+
+  <p>
+    <%= f.label :phone_type2 %>
+    <%= f.text_field :phone_type2 %>
+  </p>
+
+  <p>
+    <%= f.label :phone2 %>
+    <%= f.text_field :phone2 %>
+  </p>
+
+  <p>
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </p>
+
+  <p>
+    <%= f.label :grad_year, "Current Grade" %>
+    <%= f.select :grad_year, options_for_select([
+                                                  ["Freshman - 2017", "2017"],
+                                                  ["Sophomore - 2016", "2016"],
+                                                  ["Junior - 2015", "2015"],
+                                                  ["Senior - 2014", "2014"]]) %>
+  </p>
+
+  <p>
+    <%= f.label :drivers_license, "Driver's License Status" %>
+    <%= f.select :drivers_license, options_for_select([
+                                                        ["I have a driver's license", "drivers license"],
+                                                        ["I have a driver's permit", "drivers permit"],
+                                                        ["I DO NOT have a driver's license", "none"]]) %>
+  </p>
+
+  <p>
+    <%= f.label :jersey_size, "Jersey Size" %>
+    <%= f.select :jersey_size, options_for_select([
+                                                    ["Small", "s"],
+                                                    ["Medium", "m"],
+                                                    ["Large", "l"],
+                                                    ["Extra Large", "xl"]]) %>
+  </p>
+
+  <p>
+    <%= f.label :shorts_size, "Shorts Size" %>
+    <%= f.select :shorts_size, options_for_select([
+                                                    ["Small", "s"],
+                                                    ["Medium", "m"],
+                                                    ["Large", "l"],
+                                                    ["Extra Large", "xl"]]) %>
+  </p>
+
+  <p>
+    <%= f.label :notes, "Additional Notes" %>
+    <%= f.text_field :notes %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
